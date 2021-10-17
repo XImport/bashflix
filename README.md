@@ -24,7 +24,7 @@ bashflix "serie s01e01" en
 ```
 3. Run install script: 🏃‍♀️ 
 ```
-sudo bash -c "$(curl -s https://raw.githubusercontent.com/0zz4r/bashflix/master/install.sh)"
+sudo bash -c "$(curl -s https://raw.githubusercontent.com/XImport/bashflix/master/install.sh)"
 ```
 4. (Optional) [Change DNS to 1.1.1.1](https://1.1.1.1/dns/) to prevent torrent search failures 😵
 
