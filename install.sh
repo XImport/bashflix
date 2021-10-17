@@ -104,7 +104,7 @@ This script will attempt to install the following software:
 * pip
 * npm
 * nodejs
-* vlc
+* mpv
 * pirate-get
 * subliminal
 * peerflix
@@ -116,7 +116,7 @@ declare -A deps=(
     [curl]=curl
     [pip3]=python3-pip
     [npm]=npm
-    [vlc]=vlc
+    [mpv]=mpv
 )
 
 MACOS_VLC=/Applications/VLC.app/Contents/MacOS/VLC
@@ -127,7 +127,7 @@ case $OS in
         deps[pip3]=python       # Provides pip3
         deps[npm]=node          # Provides npm
         deps[$MACOS_VLC]=$MACOS_VLC
-        unset -v 'deps[vlc]'
+        unset -v 'deps[mpv]'
         ;;
 
     arch)
@@ -147,9 +147,9 @@ if (( ndeps=${#deps[@]} )); then
     if [[ $OS == macos ]]; then
         #check_for brew || install_brew
 
-        # Special case. https://formulae.brew.sh/cask/vlc
+        # Special case. https://formulae.brew.sh/cask/mpv
         if [[ -v deps[$MACOS_VLC] ]]; then
-            pkg_install --cask vlc
+            pkg_install --cask mpv
             unset -v 'deps[$MACOS_VLC]'
             ((ndeps--))
         fi
