@@ -100,5 +100,5 @@ if [ -z "${subtitle}" ]; then
   peerflix ${magnet} --mpv -- --fullscreen
 else
   echo "Streaming ${torrent_name} with ${subtitle}..."
-  peerflix ${magnet} --subtitles ${subtitle} --mvp -- --fullscreen 
+  peerflix ${magnet} --subtitles ${subtitle} --mpv -- --fullscreen 
 fi
