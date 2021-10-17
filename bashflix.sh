@@ -97,8 +97,8 @@ fi
 
 if [ -z "${subtitle}" ]; then
   echo "Streaming ${torrent_name}"
-  peerflix ${magnet} --vlc -- --fullscreen
+  peerflix ${magnet} --mpv -- --fullscreen
 else
   echo "Streaming ${torrent_name} with ${subtitle}..."
-  peerflix ${magnet} --subtitles ${subtitle} --vlc -- --fullscreen 
+  peerflix ${magnet} --subtitles ${subtitle} --mvp -- --fullscreen 
 fi
